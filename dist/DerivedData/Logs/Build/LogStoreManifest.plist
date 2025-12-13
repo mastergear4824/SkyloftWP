@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>7797FC95-45F2-4123-8358-6D8A3488B349</key>
+		<key>94C850A7-C37D-44E1-91EA-C5230AE9B8FB</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>7797FC95-45F2-4123-8358-6D8A3488B349.xcactivitylog</string>
+			<string>94C850A7-C37D-44E1-91EA-C5230AE9B8FB.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -40,13 +40,13 @@
 			<key>signature</key>
 			<string>Cleaning project AIStreamWallpaper with scheme AIStreamWallpaper and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>787353690.39434004</real>
+			<real>787354451.72352505</real>
 			<key>timeStoppedRecording</key>
-			<real>787353690.623469</real>
+			<real>787354451.99641597</real>
 			<key>title</key>
 			<string>Cleaning project AIStreamWallpaper with scheme AIStreamWallpaper and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>7797FC95-45F2-4123-8358-6D8A3488B349</string>
+			<string>94C850A7-C37D-44E1-91EA-C5230AE9B8FB</string>
 		</dict>
 	</dict>
 </dict>

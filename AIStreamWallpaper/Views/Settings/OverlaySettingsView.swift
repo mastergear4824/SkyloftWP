@@ -185,7 +185,8 @@ struct SliderRowDouble: View {
                 .frame(width: 24)
             
             Text(title)
-                .frame(width: 80, alignment: .leading)
+                .frame(width: 100, alignment: .leading)
+                .lineLimit(1)
             
             Slider(value: $value, in: range)
                 .frame(maxWidth: .infinity)
