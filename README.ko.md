@@ -171,7 +171,6 @@ Midjourney TV 연결 및 자동 저장 설정을 구성합니다.
 
 - **macOS 13.0 (Ventura)** 이상
 - **Xcode 15.0** 이상 (빌드 시)
-- 손쉬운 사용 권한 (글로벌 단축키용)
 
 ---
 
@@ -216,17 +215,6 @@ xcodebuild -project AIStreamWallpaper.xcodeproj \
 │   └── {uuid}.jpg
 └── Buffer/              # 버퍼 모드 임시 파일
 ```
-
----
-
-## 🔐 권한
-
-### 손쉬운 사용 (Accessibility)
-글로벌 단축키를 사용하려면 손쉬운 사용 권한이 필요합니다:
-- 시스템 설정 → 개인 정보 보호 및 보안 → 손쉬운 사용
-- AI Stream Wallpaper 체크
-
-> 이 권한 없이도 앱은 작동하지만, 다른 앱이 포커스 상태일 때 단축키가 작동하지 않습니다.
 
 ---
 

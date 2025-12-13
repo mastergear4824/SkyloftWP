@@ -171,7 +171,6 @@ View app information and manage your library.
 
 - **macOS 13.0 (Ventura)** or later
 - **Xcode 15.0** or later (for building)
-- Accessibility permission (for global hotkeys)
 
 ---
 
@@ -339,17 +338,6 @@ AppConfiguration
 │   └── {uuid}.jpg
 └── Buffer/              # Buffer mode temp files
 ```
-
----
-
-## 🔐 Permissions
-
-### Accessibility
-Global hotkeys require Accessibility permission:
-- System Settings → Privacy & Security → Accessibility
-- Check AI Stream Wallpaper
-
-> The app works without this permission, but hotkeys won't work when other apps have focus.
 
 ---
 
