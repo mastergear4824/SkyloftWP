@@ -1,0 +1,12 @@
+{
+  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/AIStreamWallpaper/App/AIStreamWallpaperApp.swift" : {
+    "abi-baseline-json" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/build/Build/Intermediates.noindex/AIStreamWallpaper.build/Release/AIStreamWallpaper.build/Objects-normal/arm64/AIStreamWallpaper.abi.json",
+    "const-values" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/build/Build/Intermediates.noindex/AIStreamWallpaper.build/Release/AIStreamWallpaper.build/Objects-normal/arm64/AIStreamWallpaper-primary.swiftconstvalues",
+    "dependencies" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/build/Build/Intermediates.noindex/AIStreamWallpaper.build/Release/AIStreamWallpaper.build/Objects-normal/arm64/AIStreamWallpaper-primary.d",
+    "diagnostics" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/build/Build/Intermediates.noindex/AIStreamWallpaper.build/Release/AIStreamWallpaper.build/Objects-normal/arm64/AIStreamWallpaper-primary.dia",
+    "objc-header" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/build/Build/Intermediates.noindex/AIStreamWallpaper.build/Release/AIStreamWallpaper.build/Objects-normal/arm64/AIStreamWallpaper-Swift.h",
+    "swiftdoc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/build/Build/Intermediates.noindex/AIStreamWallpaper.build/Release/AIStreamWallpaper.build/Objects-normal/arm64/AIStreamWallpaper.swiftdoc",
+    "swiftmodule" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/build/Build/Intermediates.noindex/AIStreamWallpaper.build/Release/AIStreamWallpaper.build/Objects-normal/arm64/AIStreamWallpaper.swiftmodule",
+    "swiftsourceinfo" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/build/Build/Intermediates.noindex/AIStreamWallpaper.build/Release/AIStreamWallpaper.build/Objects-normal/arm64/AIStreamWallpaper.swiftsourceinfo"
+  }
+}
