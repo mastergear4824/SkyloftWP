@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>94C850A7-C37D-44E1-91EA-C5230AE9B8FB</key>
+		<key>45BB3E13-9FCA-46A1-9DE2-7177F6C12CE3</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>94C850A7-C37D-44E1-91EA-C5230AE9B8FB.xcactivitylog</string>
+			<string>45BB3E13-9FCA-46A1-9DE2-7177F6C12CE3.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -40,13 +40,55 @@
 			<key>signature</key>
 			<string>Cleaning project AIStreamWallpaper with scheme AIStreamWallpaper and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>787354451.72352505</real>
+			<real>787377141.06668603</real>
 			<key>timeStoppedRecording</key>
-			<real>787354451.99641597</real>
+			<real>787377141.40908003</real>
 			<key>title</key>
 			<string>Cleaning project AIStreamWallpaper with scheme AIStreamWallpaper and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>94C850A7-C37D-44E1-91EA-C5230AE9B8FB</string>
+			<string>45BB3E13-9FCA-46A1-9DE2-7177F6C12CE3</string>
+		</dict>
+		<key>E536C7B6-EF27-4D1A-9B08-859F427A4675</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E536C7B6-EF27-4D1A-9B08-859F427A4675.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>3</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AIStreamWallpaper project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AIStreamWallpaper</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project AIStreamWallpaper with scheme AIStreamWallpaper and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>787377141.41047394</real>
+			<key>timeStoppedRecording</key>
+			<real>787377154.267097</real>
+			<key>title</key>
+			<string>Building project AIStreamWallpaper with scheme AIStreamWallpaper and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>E536C7B6-EF27-4D1A-9B08-859F427A4675</string>
 		</dict>
 	</dict>
 </dict>

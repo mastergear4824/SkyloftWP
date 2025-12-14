@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ServiceManagement
 
 struct GeneralSettingsView: View {
     @StateObject private var configManager = ConfigurationManager.shared
@@ -100,9 +99,8 @@ struct GeneralSettingsView: View {
                 Toggle(isOn: Binding(
                     get: { configManager.config.behavior.autoStart },
                     set: { newValue in
-                        configManager.config.behavior.autoStart = newValue
-                        configManager.save()
-                        setLaunchAtLogin(newValue)
+                        // Use unified setAutoStart method
+                        configManager.setAutoStart(newValue)
                     }
                 )) {
                     VStack(alignment: .leading, spacing: 4) {
@@ -117,22 +115,6 @@ struct GeneralSettingsView: View {
             .padding()
             .background(Color(NSColor.controlBackgroundColor))
             .cornerRadius(12)
-        }
-    }
-    
-    // MARK: - Actions
-    
-    private func setLaunchAtLogin(_ enabled: Bool) {
-        if #available(macOS 13.0, *) {
-            do {
-                if enabled {
-                    try SMAppService.mainApp.register()
-                } else {
-                    try SMAppService.mainApp.unregister()
-                }
-            } catch {
-                print("Failed to set launch at login: \(error)")
-            }
         }
     }
 }

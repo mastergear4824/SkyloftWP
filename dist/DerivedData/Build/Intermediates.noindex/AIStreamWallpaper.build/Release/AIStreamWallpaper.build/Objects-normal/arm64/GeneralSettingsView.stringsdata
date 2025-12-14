@@ -7,7 +7,7 @@
         "key": "System Default",
         "location": {
           "startingColumn": 26,
-          "startingLine": 49
+          "startingLine": 48
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "English",
         "location": {
           "startingColumn": 26,
-          "startingLine": 50
+          "startingLine": 49
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "한국어",
         "location": {
           "startingColumn": 26,
-          "startingLine": 51
+          "startingLine": 50
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "日本語",
         "location": {
           "startingColumn": 26,
-          "startingLine": 52
+          "startingLine": 51
         }
       }
     ]

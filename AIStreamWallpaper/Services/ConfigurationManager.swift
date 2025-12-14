@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import ServiceManagement
 
 class ConfigurationManager: ObservableObject {
     
@@ -90,8 +91,26 @@ class ConfigurationManager: ObservableObject {
     func setAutoStart(_ enabled: Bool) {
         config.behavior.autoStart = enabled
         save()
-        // Update launch agent
-        LaunchAgentManager.shared.setEnabled(enabled)
+        
+        // Use SMAppService for modern macOS (13.0+)
+        if #available(macOS 13.0, *) {
+            do {
+                if enabled {
+                    try SMAppService.mainApp.register()
+                    print("✅ Auto-start registered with SMAppService")
+                } else {
+                    try SMAppService.mainApp.unregister()
+                    print("✅ Auto-start unregistered from SMAppService")
+                }
+            } catch {
+                print("❌ Failed to set auto-start: \(error)")
+                // Fallback to LaunchAgent if SMAppService fails
+                LaunchAgentManager.shared.setEnabled(enabled)
+            }
+        } else {
+            // Fallback for older macOS
+            LaunchAgentManager.shared.setEnabled(enabled)
+        }
     }
     
     func selectVideoSource(_ source: VideoSource) {
