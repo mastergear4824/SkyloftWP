@@ -312,3 +312,5 @@
 "about.hiddenVideos" = "Hidden Videos";
 "about.management" = "Management";
 "about.restoreHidden" = "Restore Hidden Videos";
+"about.support" = "Support Development";
+"about.supportDescription" = "If you enjoy this app, consider buying me a coffee! ☕";

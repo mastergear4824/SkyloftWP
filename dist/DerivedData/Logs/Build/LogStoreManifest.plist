@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>F12A117A-F553-4B1B-8896-82F56F501898</key>
+		<key>90D21EB6-5CDB-4C35-A4EA-8FB5D33C8F7B</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F12A117A-F553-4B1B-8896-82F56F501898.xcactivitylog</string>
+			<string>90D21EB6-5CDB-4C35-A4EA-8FB5D33C8F7B.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -40,13 +40,13 @@
 			<key>signature</key>
 			<string>Cleaning project SkyloftWP with scheme SkyloftWP and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>788213196.91107702</real>
+			<real>788272610.20853496</real>
 			<key>timeStoppedRecording</key>
-			<real>788213197.20547903</real>
+			<real>788272610.47190297</real>
 			<key>title</key>
 			<string>Cleaning project SkyloftWP with scheme SkyloftWP and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>F12A117A-F553-4B1B-8896-82F56F501898</string>
+			<string>90D21EB6-5CDB-4C35-A4EA-8FB5D33C8F7B</string>
 		</dict>
 	</dict>
 </dict>

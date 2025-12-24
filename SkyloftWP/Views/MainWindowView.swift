@@ -161,7 +161,7 @@ struct AboutSettingsView: View {
                     .frame(width: 64, height: 64)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("AI Stream Wallpaper")
+                    Text("Skyloft WP")
                         .font(.title2.bold())
                     
                     Text(L("general.version") + " " + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"))
@@ -195,13 +195,65 @@ struct AboutSettingsView: View {
                     Text(L("about.contact"))
                         .foregroundColor(.secondary)
                     Spacer()
-                    Link("mastergear@aiclude.com", destination: URL(string: "mailto:mastergear@aiclude.com")!)
+                    Link("Facebook", destination: URL(string: "https://www.facebook.com/keunjinkim00")!)
                         .foregroundColor(.accentColor)
                 }
             }
             .padding()
             .background(Color(NSColor.controlBackgroundColor))
             .cornerRadius(12)
+            
+            // 후원 섹션
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Image(systemName: "cup.and.saucer.fill")
+                        .foregroundColor(.yellow)
+                    Text(L("about.support"))
+                        .fontWeight(.medium)
+                }
+                
+                Text(L("about.supportDescription"))
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                
+                Divider()
+                
+                Link(destination: URL(string: "https://www.buymeacoffee.com/keunjin.kim")!) {
+                    HStack {
+                        AsyncImage(url: URL(string: "https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=keunjin.kim&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff")) { phase in
+                            switch phase {
+                            case .success(let image):
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: 40)
+                            case .failure(_):
+                                buyMeCoffeeTextView
+                            case .empty:
+                                buyMeCoffeeTextView
+                            @unknown default:
+                                buyMeCoffeeTextView
+                            }
+                        }
+                        Spacer()
+                        Image(systemName: "arrow.up.right.square")
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .buttonStyle(.plain)
+            }
+            .padding()
+            .background(Color(NSColor.controlBackgroundColor))
+            .cornerRadius(12)
+        }
+    }
+    
+    private var buyMeCoffeeTextView: some View {
+        HStack {
+            Image(systemName: "heart.fill")
+                .foregroundColor(.pink)
+            Text("Buy Me a Coffee")
+                .fontWeight(.medium)
         }
     }
     
@@ -211,14 +263,6 @@ struct AboutSettingsView: View {
                 .font(.headline)
             
             VStack(alignment: .leading, spacing: 12) {
-                HStack {
-                    Text(L("library.videos"))
-                    Spacer()
-                    Text("\(libraryManager.videos.count)")
-                        .font(.title3.bold())
-                        .foregroundColor(.accentColor)
-                }
-                
                 HStack {
                     Text(L("general.storageUsed"))
                     Spacer()

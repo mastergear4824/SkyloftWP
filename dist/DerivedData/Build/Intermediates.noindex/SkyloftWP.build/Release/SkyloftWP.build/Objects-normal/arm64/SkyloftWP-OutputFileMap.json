@@ -1,171 +1,171 @@
 {
   "" : {
-    "const-values" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary.swiftconstvalues",
-    "dependencies" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary.d",
-    "diagnostics" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary.dia",
-    "emit-module-dependencies" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary-emit-module.d",
-    "emit-module-diagnostics" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary-emit-module.dia",
-    "pch" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary-Bridging-header.pch",
-    "swift-dependencies" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary.swiftdeps"
+    "const-values" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary.swiftconstvalues",
+    "dependencies" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary.d",
+    "diagnostics" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary.dia",
+    "emit-module-dependencies" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary-emit-module.dia",
+    "pch" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWP-primary.swiftdeps"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/App/AppDelegate.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/App/AppDelegate.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/AppDelegate.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/AppDelegate.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/AppDelegate.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/AppDelegate.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/App/SkyloftWPApp.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/App/SkyloftWPApp.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWPApp.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWPApp.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWPApp.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWPApp.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SkyloftWPApp.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Capture/DownloadManager.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Capture/DownloadManager.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/DownloadManager.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/DownloadManager.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/DownloadManager.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/DownloadManager.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/DownloadManager.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Capture/MetadataExtractor.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Capture/MetadataExtractor.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MetadataExtractor.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MetadataExtractor.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MetadataExtractor.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MetadataExtractor.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MetadataExtractor.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Capture/VideoInterceptor.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Capture/VideoInterceptor.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoInterceptor.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoInterceptor.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoInterceptor.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoInterceptor.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoInterceptor.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Library/LibraryDatabase.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Library/LibraryDatabase.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryDatabase.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryDatabase.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryDatabase.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryDatabase.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryDatabase.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Library/LibraryManager.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Library/LibraryManager.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryManager.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryManager.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryManager.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryManager.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryManager.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Library/ThumbnailGenerator.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Library/ThumbnailGenerator.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ThumbnailGenerator.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ThumbnailGenerator.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ThumbnailGenerator.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ThumbnailGenerator.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ThumbnailGenerator.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Models/Configuration.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Models/Configuration.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/Configuration.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/Configuration.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/Configuration.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/Configuration.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/Configuration.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Models/VideoItem.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Models/VideoItem.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoItem.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoItem.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoItem.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoItem.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoItem.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Playback/PlaybackController.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Playback/PlaybackController.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/PlaybackController.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/PlaybackController.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/PlaybackController.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/PlaybackController.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/PlaybackController.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Services/ConfigurationManager.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Services/ConfigurationManager.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ConfigurationManager.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ConfigurationManager.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ConfigurationManager.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ConfigurationManager.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ConfigurationManager.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Services/HotkeyManager.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Services/HotkeyManager.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/HotkeyManager.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/HotkeyManager.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/HotkeyManager.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/HotkeyManager.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/HotkeyManager.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Services/LocalizationManager.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Services/LocalizationManager.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LocalizationManager.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LocalizationManager.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LocalizationManager.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LocalizationManager.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LocalizationManager.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Services/MonitorManager.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Services/MonitorManager.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MonitorManager.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MonitorManager.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MonitorManager.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MonitorManager.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MonitorManager.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Services/NetworkMonitorService.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Services/NetworkMonitorService.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/NetworkMonitorService.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/NetworkMonitorService.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/NetworkMonitorService.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/NetworkMonitorService.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/NetworkMonitorService.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Services/SchedulerService.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Services/SchedulerService.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SchedulerService.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SchedulerService.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SchedulerService.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SchedulerService.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SchedulerService.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Services/ScreenSaverManager.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Services/ScreenSaverManager.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ScreenSaverManager.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ScreenSaverManager.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ScreenSaverManager.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ScreenSaverManager.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ScreenSaverManager.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/LibraryBrowserView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/LibraryBrowserView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryBrowserView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryBrowserView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryBrowserView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryBrowserView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/LibraryBrowserView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/MainWindowView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/MainWindowView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MainWindowView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MainWindowView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MainWindowView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MainWindowView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MainWindowView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/MenuBarView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/MenuBarView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MenuBarView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MenuBarView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MenuBarView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MenuBarView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MenuBarView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/MiniControlsView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/MiniControlsView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MiniControlsView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MiniControlsView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MiniControlsView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MiniControlsView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/MiniControlsView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/Settings/GeneralSettingsView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/Settings/GeneralSettingsView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneralSettingsView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneralSettingsView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneralSettingsView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneralSettingsView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneralSettingsView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/Settings/OverlaySettingsView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/Settings/OverlaySettingsView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/OverlaySettingsView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/OverlaySettingsView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/OverlaySettingsView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/OverlaySettingsView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/OverlaySettingsView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/Settings/ShortcutSettingsView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/Settings/ShortcutSettingsView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ShortcutSettingsView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ShortcutSettingsView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ShortcutSettingsView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ShortcutSettingsView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/ShortcutSettingsView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/Settings/StreamingSettingsView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/Settings/StreamingSettingsView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/StreamingSettingsView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/StreamingSettingsView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/StreamingSettingsView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/StreamingSettingsView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/StreamingSettingsView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/SettingsView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/SettingsView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SettingsView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SettingsView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SettingsView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/SettingsView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Wallpaper/VideoWallpaperView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Wallpaper/VideoWallpaperView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoWallpaperView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoWallpaperView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoWallpaperView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoWallpaperView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/VideoWallpaperView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Wallpaper/WallpaperManager.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Wallpaper/WallpaperManager.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperManager.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperManager.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperManager.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperManager.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperManager.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Wallpaper/WallpaperWindow.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Wallpaper/WallpaperWindow.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperWindow.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperWindow.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperWindow.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperWindow.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WallpaperWindow.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Wallpaper/WebWallpaperView.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Wallpaper/WebWallpaperView.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WebWallpaperView.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WebWallpaperView.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WebWallpaperView.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WebWallpaperView.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/WebWallpaperView.o"
   },
-  "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+  "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/DerivedSources/GeneratedAssetSymbols.swift" : {
     "index-unit-output-path" : "/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
-    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
-    "object" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+    "llvm-bc" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/dist/DerivedData/Build/Intermediates.noindex/SkyloftWP.build/Release/SkyloftWP.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
   }
 }

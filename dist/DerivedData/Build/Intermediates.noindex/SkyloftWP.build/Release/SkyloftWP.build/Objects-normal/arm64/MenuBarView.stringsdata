@@ -1,10 +1,10 @@
 {
-  "source": "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/MenuBarView.swift",
+  "source": "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/MenuBarView.swift",
   "tables": {
     "Localizable": [
       {
         "comment": "",
-        "key": "AI Stream Wallpaper",
+        "key": "Skyloft WP",
         "location": {
           "startingColumn": 22,
           "startingLine": 53

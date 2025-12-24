@@ -199,4 +199,10 @@ xcodebuild -project SkyloftWP.xcodeproj \
 ## 👨‍💻 開発者
 
 **Mastergear (Keunjin Kim)**  
-📧 mastergear@aiclude.com
+🔗 [Facebook](https://www.facebook.com/keunjinkim00)
+
+### ☕ サポート
+
+このアプリが気に入ったら、コーヒーを一杯おごってください！
+
+<a href="https://www.buymeacoffee.com/keunjin.kim"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=keunjin.kim&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>

@@ -1,5 +1,5 @@
 {
-  "source": "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/MainWindowView.swift",
+  "source": "/Users/mastergear/toy/midtv-fan-bg/SkyloftWP/SkyloftWP/Views/MainWindowView.swift",
   "tables": {
     "Localizable": [
       {
@@ -12,7 +12,7 @@
       },
       {
         "comment": "",
-        "key": "AI Stream Wallpaper",
+        "key": "Skyloft WP",
         "location": {
           "startingColumn": 26,
           "startingLine": 164
@@ -28,7 +28,7 @@
       },
       {
         "comment": "",
-        "key": "mastergear@aiclude.com",
+        "key": "Facebook",
         "location": {
           "startingColumn": 26,
           "startingLine": 198
@@ -36,10 +36,10 @@
       },
       {
         "comment": "",
-        "key": "%lld",
+        "key": "Buy Me a Coffee",
         "location": {
-          "startingColumn": 26,
-          "startingLine": 217
+          "startingColumn": 18,
+          "startingLine": 255
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "%lld",
         "location": {
           "startingColumn": 26,
-          "startingLine": 233
+          "startingLine": 277
         }
       },
       {
@@ -55,7 +55,7 @@
         "key": "%lld videos",
         "location": {
           "startingColumn": 22,
-          "startingLine": 304
+          "startingLine": 348
         }
       },
       {
@@ -63,7 +63,7 @@
         "key": "Add Videos",
         "location": {
           "startingColumn": 27,
-          "startingLine": 298
+          "startingLine": 342
         }
       },
       {
@@ -71,7 +71,7 @@
         "key": "Drop videos here",
         "location": {
           "startingColumn": 30,
-          "startingLine": 373
+          "startingLine": 417
         }
       },
       {
@@ -79,7 +79,7 @@
         "key": "Add videos or enable streaming to get started",
         "location": {
           "startingColumn": 18,
-          "startingLine": 404
+          "startingLine": 448
         }
       },
       {
@@ -87,7 +87,7 @@
         "key": "Add Videos",
         "location": {
           "startingColumn": 27,
-          "startingLine": 411
+          "startingLine": 455
         }
       },
       {
@@ -95,7 +95,7 @@
         "key": "Enable Streaming",
         "location": {
           "startingColumn": 31,
-          "startingLine": 417
+          "startingLine": 461
         }
       }
     ]

@@ -209,5 +209,11 @@ hdiutil convert "$DMG_RW" -format UDZO -imagekey zlib-level=9 -o "$DMG_FINAL"
 rm -f "$DMG_RW"
 rm -rf "$DMG_TEMP"
 
+# 배포 디렉토리로 복사
+DIST_OUTPUT_DIR="/Users/mastergear/toy/midtv-fan-bg/SkyloftWP-dist"
+mkdir -p "$DIST_OUTPUT_DIR"
+cp "$DMG_FINAL" "$DIST_OUTPUT_DIR/"
+
 echo ""
 echo "✅ Done: $DMG_FINAL ($(ls -lh "$DMG_FINAL" | awk '{print $5}'))"
+echo "📦 Copied to: $DIST_OUTPUT_DIR/SkyloftWP.dmg"

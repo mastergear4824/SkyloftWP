@@ -50,7 +50,7 @@ struct MenuBarView: View {
                 .foregroundColor(.accentColor)
             
             VStack(alignment: .leading, spacing: 2) {
-                Text("AI Stream Wallpaper")
+                Text("Skyloft WP")
                     .font(.headline)
                 
                 if let currentVideo = playbackController.currentVideo {

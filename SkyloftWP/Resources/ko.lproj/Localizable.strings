@@ -312,3 +312,5 @@
 "about.hiddenVideos" = "숨김 처리된 영상";
 "about.management" = "관리";
 "about.restoreHidden" = "숨김 처리된 영상 복원";
+"about.support" = "개발 후원";
+"about.supportDescription" = "이 앱이 마음에 드신다면 커피 한 잔 사주세요! ☕";

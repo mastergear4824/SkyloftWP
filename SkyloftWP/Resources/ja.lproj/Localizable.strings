@@ -226,4 +226,6 @@
 "about.hiddenVideos" = "非表示の動画";
 "about.management" = "管理";
 "about.restoreHidden" = "非表示動画を復元";
+"about.support" = "開発をサポート";
+"about.supportDescription" = "このアプリを気に入っていただけたら、コーヒーをおごってください！☕";
 

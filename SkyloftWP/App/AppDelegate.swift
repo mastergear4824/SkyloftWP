@@ -454,7 +454,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let hostingController = NSHostingController(rootView: mainView)
         
         let window = NSWindow(contentViewController: hostingController)
-        window.title = "AI Stream Wallpaper"
+        window.title = "Skyloft WP"
         window.styleMask = [.titled, .closable, .miniaturizable]  // .resizable 제거 - 크기 고정
         window.setContentSize(NSSize(width: 1024, height: 768))
         window.minSize = NSSize(width: 1024, height: 768)
