@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# AI Stream Wallpaper - DMG 빌드 스크립트
+# Skyloft WP - DMG 빌드 스크립트
 set -e
 
 PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
 DIST_DIR="$PROJECT_DIR/dist"
-APP_NAME="AIStreamWallpaper"
-VOLUME_NAME="AI Stream Wallpaper"
+APP_NAME="SkyloftWP"
+VOLUME_NAME="Skyloft WP"
 
 BG_WIDTH=540
 BG_HEIGHT=360
@@ -32,6 +32,14 @@ if [ ! -d "$APP_PATH" ]; then
     echo "❌ App not found"
     exit 1
 fi
+
+# 스크린세이버 빌드 및 앱 번들에 복사
+echo "📺 Building Screen Saver..."
+"$PROJECT_DIR/scripts/build-screensaver.sh"
+
+mkdir -p "$APP_PATH/Contents/Resources/ScreenSaver"
+cp -R "$PROJECT_DIR/build/ScreenSaver/SkyloftWPSaver.saver" "$APP_PATH/Contents/Resources/ScreenSaver/"
+echo "✅ Screen Saver included in app bundle"
 
 echo "🎨 Creating DMG..."
 
@@ -114,7 +122,7 @@ cp -R "$APP_PATH" "$DMG_TEMP/"
 ln -s /Applications "$DMG_TEMP/Applications"
 
 DMG_RW="$DIST_DIR/rw.dmg"
-DMG_FINAL="$DIST_DIR/AIStreamWallpaper.dmg"
+DMG_FINAL="$DIST_DIR/SkyloftWP.dmg"
 rm -f "$DMG_RW" "$DMG_FINAL"
 
 hdiutil create -volname "$VOLUME_NAME" -srcfolder "$DMG_TEMP" -ov -format UDRW -size 25m "$DMG_RW"

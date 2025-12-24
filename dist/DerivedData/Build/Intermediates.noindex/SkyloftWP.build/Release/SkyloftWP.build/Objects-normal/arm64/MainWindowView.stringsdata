@@ -1,0 +1,104 @@
+{
+  "source": "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP/Views/MainWindowView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 85
+        }
+      },
+      {
+        "comment": "",
+        "key": "AI Stream Wallpaper",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "Mastergear (Keunjin Kim)",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 188
+        }
+      },
+      {
+        "comment": "",
+        "key": "mastergear@aiclude.com",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 198
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 217
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 233
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld videos",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 304
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Videos",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 298
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drop videos here",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 373
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add videos or enable streaming to get started",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 404
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Videos",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 411
+        }
+      },
+      {
+        "comment": "",
+        "key": "Enable Streaming",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 417
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,314 @@
+/* 
+  Localizable.strings (Korean)
+  MidTVWallpaper
+*/
+
+// MARK: - General
+"app.name" = "Skyloft WP";
+"app.version" = "버전";
+
+// MARK: - Common
+"common.add" = "추가";
+"common.cancel" = "취소";
+"common.close" = "닫기";
+"common.delete" = "삭제";
+"common.save" = "저장";
+"common.done" = "완료";
+"common.ok" = "확인";
+
+// MARK: - Main Window Sidebar
+"main.content" = "콘텐츠";
+"main.settings" = "설정";
+"main.library" = "라이브러리";
+"main.streaming" = "스트리밍";
+"main.display" = "디스플레이";
+"main.shortcuts" = "단축키";
+"main.general" = "일반";
+
+// MARK: - Menu Bar
+"menu.streaming" = "스트리밍";
+"menu.library" = "라이브러리";
+"menu.play" = "재생";
+"menu.pause" = "일시정지";
+"menu.saveVideo" = "현재 영상 저장";
+"menu.copyPrompt" = "프롬프트 복사";
+"menu.mute" = "음소거";
+"menu.unmute" = "음소거 해제";
+"menu.shuffle" = "셔플";
+"menu.sequential" = "순서대로";
+"menu.playOrder" = "재생 순서";
+"menu.repeat" = "반복";
+"menu.switchToLibrary" = "라이브러리로 전환";
+"menu.switchToStreaming" = "스트리밍으로 전환";
+"menu.openLibrary" = "라이브러리 열기...";
+"menu.openSettings" = "설정...";
+"menu.settings" = "설정...";
+"menu.launchAtLogin" = "로그인 시 실행";
+"menu.quit" = "종료";
+"menu.previous" = "이전";
+"menu.next" = "다음";
+"menu.noVideo" = "재생할 영상 없음";
+"menu.videosInLibrary" = "개 영상 보관 중";
+"menu.streamingConnection" = "스트리밍 연결";
+"menu.connected" = "연결됨";
+"menu.disconnected" = "연결 끊김";
+"menu.autoSaveCount" = "자동 저장 제한";
+"menu.videos" = "개";
+"menu.saveToDownloads" = "다운로드에 저장";
+"menu.hideCurrentVideo" = "이 영상 숨기기";
+
+// MARK: - Library
+"library.title" = "라이브러리";
+"library.search" = "검색...";
+"library.showFavorites" = "즐겨찾기만 보기";
+"library.empty" = "라이브러리가 비어있습니다";
+"library.noResults" = "검색 결과가 없습니다";
+"library.emptyTip" = "스트리밍 연결을 활성화하면 자동으로 영상이 저장됩니다";
+"library.enableStreaming" = "스트리밍 연결 활성화";
+"library.addLocal" = "로컬 영상 추가";
+"library.setAsWallpaper" = "배경화면으로 설정";
+"library.close" = "닫기";
+"library.videos" = "개 영상";
+"library.favorites" = "즐겨찾기";
+"library.plays" = "회 재생";
+"library.addToFavorites" = "즐겨찾기 추가";
+"library.removeFromFavorites" = "즐겨찾기 제거";
+"library.showInFinder" = "Finder에서 보기";
+"library.delete" = "삭제";
+"library.refresh" = "새로고침";
+"library.copyPrompt" = "프롬프트 복사";
+"library.dislike" = "숨김 처리";
+"library.openSource" = "소스 URL 열기";
+
+// MARK: - Sort Options
+"sort.recentFirst" = "최근 저장순";
+"sort.oldestFirst" = "오래된 순";
+"sort.nameAZ" = "이름 (가-하)";
+"sort.nameZA" = "이름 (하-가)";
+"sort.mostPlayed" = "가장 많이 재생된";
+"sort.shortest" = "짧은 순";
+"sort.longest" = "긴 순";
+
+// MARK: - Streaming Settings
+"streaming.connectionStatus" = "연결 상태";
+"streaming.connected" = "연결됨";
+"streaming.disconnected" = "연결 끊김";
+"streaming.connect" = "연결";
+"streaming.disconnect" = "연결 끊기";
+"streaming.source" = "영상 소스";
+"streaming.default" = "기본";
+"streaming.addCustomUrl" = "커스텀 URL 추가";
+"streaming.enterUrl" = "URL 입력...";
+"streaming.autoSave" = "자동 저장";
+"streaming.autoSaveEnabled" = "라이브러리에 저장";
+"streaming.autoSaveEnabledInfo" = "비활성화하면 라이브러리에 저장하지 않고 바로 재생합니다.";
+"streaming.maxVideos" = "최대 영상 수";
+"streaming.autoSaveInfo" = "새로운 영상이 자동으로 라이브러리에 저장됩니다. 제한을 초과하면 오래된 영상이 삭제됩니다.";
+"streaming.description" = "스트리밍 연결이 활성화되면 자동으로 영상이 라이브러리에 저장됩니다";
+"streaming.connection" = "연결";
+"streaming.enableConnection" = "스트리밍 연결 활성화";
+"streaming.online" = "온라인";
+"streaming.offline" = "오프라인";
+"streaming.autoSaveCount" = "최신 영상 유지";
+"streaming.autoSaveTip" = "새 영상이 자동 저장되고, 오래된 영상은 제한에 맞춰 삭제됩니다";
+"streaming.libraryCount" = "현재 라이브러리";
+"streaming.sources" = "영상 소스";
+"streaming.sourceName" = "이름";
+"streaming.sourceURL" = "URL";
+"streaming.add" = "추가";
+"streaming.customSources" = "커스텀 소스";
+"streaming.photosLibrary" = "사진 라이브러리";
+"streaming.builtIn" = "내장";
+"streaming.photosLibraryDesc" = "사진 앱에서 16:9 영상을 무작위로 재생";
+"streaming.photosAccessRequired" = "사진 접근 권한 필요";
+"streaming.grantAccess" = "권한 허용";
+"streaming.disclaimer" = "추가하는 소스에 대한 책임은 사용자에게 있습니다. 각 웹사이트의 서비스 약관을 준수하세요.";
+"streaming.disclaimerTitle" = "주의사항";
+
+// MARK: - Display Settings
+"display.preview" = "미리보기";
+"display.adjustments" = "조정";
+"display.transparency" = "투명도";
+"display.brightness" = "밝기";
+"display.saturation" = "채도";
+"display.blur" = "블러";
+"display.presets" = "프리셋";
+"display.preset.default" = "기본";
+"display.preset.subtle" = "은은하게";
+"display.preset.dim" = "어둡게";
+"display.preset.ambient" = "분위기";
+"display.preset.focus" = "집중 모드";
+"display.preset.vivid" = "선명하게";
+"display.preset.cinema" = "시네마";
+"display.preset.neon" = "네온";
+"display.preset.dreamy" = "몽환적";
+"display.preset.night" = "야간";
+"display.preset.warm" = "따뜻하게";
+"display.preset.retro" = "레트로";
+"display.preset.cool" = "시원하게";
+"display.preset.soft" = "부드럽게";
+
+// MARK: - Shortcuts Settings
+"shortcuts.accessibilityPermission" = "손쉬운 사용 권한";
+"shortcuts.permissionGranted" = "권한 허용됨";
+"shortcuts.permissionNotGranted" = "권한 필요";
+"shortcuts.grantPermission" = "권한 허용";
+"shortcuts.permissionRequired" = "권한이 필요합니다";
+"shortcuts.permissionMessage" = "글로벌 단축키를 사용하려면 손쉬운 사용 권한이 필요합니다. 시스템 설정을 열어 권한을 허용하세요.";
+"shortcuts.permissionInfo" = "손쉬운 사용 권한이 없으면 글로벌 단축키가 작동하지 않습니다. 메뉴바 컨트롤은 계속 사용할 수 있습니다.";
+"shortcuts.openSettings" = "시스템 설정 열기";
+"shortcuts.globalShortcuts" = "글로벌 단축키";
+"shortcuts.nextVideo" = "다음 영상";
+"shortcuts.previousVideo" = "이전 영상";
+"shortcuts.togglePlayPause" = "재생/일시정지";
+"shortcuts.copyPrompt" = "프롬프트 복사";
+"shortcuts.toggleMiniController" = "미니 컨트롤러 토글";
+"shortcuts.pressKey" = "키를 누르세요...";
+"shortcuts.notSet" = "설정 안 됨";
+"shortcuts.miniController" = "미니 컨트롤러";
+"shortcuts.enableMiniController" = "미니 컨트롤러 활성화";
+"shortcuts.miniControllerInfo" = "빠른 재생 컨트롤을 위한 플로팅 패널";
+"shortcuts.title" = "단축키";
+"shortcuts.prevVideo" = "이전 영상";
+"shortcuts.saveVideo" = "영상 저장";
+"shortcuts.toggleMute" = "음소거 전환";
+"shortcuts.playPause" = "재생/일시정지";
+"shortcuts.openLibrary" = "라이브러리 열기";
+"shortcuts.showControls" = "컨트롤 표시/숨기기";
+"shortcuts.pressKeys" = "키를 누르세요...";
+"shortcuts.tip" = "💡 단축키를 클릭하여 변경하세요. 조합키(⌘⌥⌃⇧)와 함께 키를 누르세요.";
+"shortcuts.accessibilityNote" = "⚠️ 글로벌 단축키는 시스템 설정 → 개인 정보 보호 및 보안 → 손쉬운 사용에서 권한이 필요합니다";
+"shortcuts.multiMonitorTip" = "🖥️ 다중 모니터 사용 시, 단축키는 마우스 커서가 위치한 모니터에 적용됩니다.";
+
+// MARK: - General Settings
+"general.language" = "언어";
+"general.selectLanguage" = "언어 선택";
+"general.systemDefault" = "시스템 기본값";
+"general.languageInfo" = "일부 변경사항은 앱 재시작이 필요할 수 있습니다";
+"general.playback" = "재생";
+"general.repeatMode" = "반복 모드";
+"general.shuffle" = "셔플";
+"general.autoPlay" = "시작 시 자동 재생";
+"general.displayMode" = "표시 모드";
+"general.useAsWallpaper" = "배경화면으로 사용";
+"general.useAsWallpaperInfo" = "영상을 데스크탑 배경으로 표시합니다";
+"general.useAsScreensaver" = "화면보호기로 사용";
+"general.useAsScreensaverInfo" = "시스템이 유휴 상태일 때 영상을 표시합니다";
+"general.screensaverIdleTime" = "시작 시간";
+"general.minutes1" = "1분";
+"general.minutes2" = "2분";
+"general.minutes5" = "5분";
+"general.minutes10" = "10분";
+"general.minutes15" = "15분";
+"general.minutes30" = "30분";
+"general.startup" = "시작";
+"general.launchAtLogin" = "로그인 시 실행";
+"general.launchAtLoginInfo" = "로그인할 때 Skyloft WP를 시작합니다";
+"general.startMinimized" = "최소화 상태로 시작";
+"general.startMinimizedInfo" = "시작할 때 윈도우를 표시하지 않습니다";
+"general.about" = "정보";
+"general.version" = "버전";
+"general.librarySize" = "라이브러리 크기";
+"general.storageUsed" = "사용된 저장 공간";
+"general.clearLibrary" = "라이브러리 비우기";
+"general.clearLibraryConfirm" = "라이브러리를 비우시겠습니까?";
+"general.clearLibraryWarning" = "모든 영상이 라이브러리에서 삭제됩니다. 이 작업은 취소할 수 없습니다.";
+"general.audio" = "오디오";
+"general.mute" = "음소거";
+"general.playbackInfo" = "라이브러리 영상은 항상 반복 재생됩니다";
+"general.autoPause" = "자동 일시정지";
+"general.pauseOnBattery" = "배터리 전원 시 일시정지";
+"general.pauseOnFullscreen" = "전체화면 앱 사용 시 일시정지";
+"general.schedule" = "예약";
+"general.enableSchedule" = "활성 시간 설정";
+"general.startTime" = "시작";
+"general.endTime" = "종료";
+"general.storageLocation" = "저장 위치";
+"general.change" = "변경...";
+"general.showNotification" = "영상 저장 시 알림 표시";
+"general.continueWhenLocked" = "잠금 시 계속 재생";
+"general.continueWhenLockedInfo" = "화면이 잠겼을 때 백그라운드에서 계속 재생합니다";
+"general.screenSaver" = "화면 보호기";
+"general.screenSaverInstalled" = "설치됨";
+"general.screenSaverNotInstalled" = "설치 안됨";
+"general.screenSaverDesc" = "라이브러리의 영상을 macOS 화면 보호기로 재생합니다.";
+"general.screenSaverInstall" = "화면 보호기 설치";
+"general.screenSaverUninstall" = "제거";
+"general.screenSaverOpenSettings" = "설정 열기";
+"general.screenSaverTip" = "설치 후 시스템 설정 > 화면 보호기에서 \"Skyloft WP\"를 선택하세요.";
+
+// MARK: - Repeat Modes
+"repeat.none" = "반복 안 함";
+"repeat.one" = "한 곡 반복";
+"repeat.all" = "전체 반복";
+
+// MARK: - Playback Modes
+"mode.streaming" = "실시간 스트리밍";
+"mode.library" = "내 라이브러리";
+
+// MARK: - Notifications
+"notification.saved" = "영상 저장됨";
+"notification.saveFailed" = "저장 실패";
+"notification.copied" = "✓ 복사됨";
+"notification.copyFailed" = "⚠ 복사 실패";
+"notification.promptCopied" = "프롬프트가 클립보드에 복사되었습니다";
+"notification.promptNotFound" = "프롬프트를 찾을 수 없습니다";
+"notification.noWebView" = "웹 뷰를 사용할 수 없습니다";
+"notification.noVideoURL" = "영상 URL을 찾을 수 없습니다. 영상이 로드될 때까지 기다려주세요.";
+
+// MARK: - Quality Options
+"quality.auto" = "자동";
+"quality.high" = "높음";
+"quality.medium" = "보통";
+"quality.low" = "낮음";
+
+// MARK: - Settings Tabs (Legacy)
+"settings.title" = "설정";
+"settings.general" = "일반";
+"settings.source" = "소스";
+"settings.streaming" = "스트리밍";
+"settings.overlay" = "디스플레이";
+"settings.monitor" = "모니터";
+"settings.shortcuts" = "단축키";
+
+// MARK: - Source Settings (Legacy)
+"source.videoSources" = "영상 소스";
+"source.addSource" = "소스 추가";
+"source.name" = "이름";
+"source.url" = "URL";
+"source.add" = "추가";
+"source.builtIn" = "기본 제공";
+"source.tip" = "💡 원하는 스트리밍 비디오 URL을 배경화면 소스로 추가하세요.";
+
+// MARK: - Overlay Settings (Legacy)
+"overlay.description" = "배경 영상이 작업에 방해되지 않도록 조정하세요";
+"overlay.opacity" = "불투명도";
+"overlay.opacityTip" = "낮은 값은 배경을 더 투명하게 만듭니다";
+"overlay.brightness" = "밝기";
+"overlay.brightnessTip" = "어두운 설정은 눈의 피로를 줄여줍니다";
+"overlay.saturation" = "채도";
+"overlay.saturationTip" = "낮은 값은 흑백에 가까워집니다";
+"overlay.blur" = "블러";
+"overlay.blurTip" = "블러를 추가하면 집중력을 높일 수 있습니다";
+"overlay.reset" = "기본값으로 재설정";
+
+// MARK: - Monitor Settings
+"monitor.detected" = "감지된 모니터";
+"monitor.notFound" = "모니터를 찾을 수 없습니다";
+"monitor.primary" = "주 모니터";
+"monitor.refresh" = "모니터 새로고침";
+
+// MARK: - Language Settings
+"language.title" = "언어";
+"language.system" = "시스템 기본값";
+"language.english" = "English";
+"language.korean" = "한국어";
+"language.restartRequired" = "언어 변경을 적용하려면 앱을 재시작하세요";
+
+// MARK: - About / Credits
+"about.developer" = "개발자";
+"about.contact" = "연락처";
+"about.description" = "AI 생성 영상을 배경화면으로";
+"about.hiddenVideos" = "숨김 처리된 영상";
+"about.management" = "관리";
+"about.restoreHidden" = "숨김 처리된 영상 복원";

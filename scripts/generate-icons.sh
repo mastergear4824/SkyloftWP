@@ -5,7 +5,7 @@
 #   ./scripts/generate-icons.sh path/to/icon_1024x1024.png
 #
 # 1024×1024 PNG 이미지를 입력하면 모든 필요한 크기의 아이콘을 생성합니다.
-# 생성된 아이콘은 AIStreamWallpaper/Resources/Assets.xcassets/AppIcon.appiconset/ 에 저장됩니다.
+# 생성된 아이콘은 SkyloftWP/Resources/Assets.xcassets/AppIcon.appiconset/ 에 저장됩니다.
 
 set -e
 
@@ -30,7 +30,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 
 # 출력 디렉토리
-ASSETS_DIR="$PROJECT_ROOT/AIStreamWallpaper/Resources/Assets.xcassets"
+ASSETS_DIR="$PROJECT_ROOT/SkyloftWP/Resources/Assets.xcassets"
 OUTPUT_DIR="$ASSETS_DIR/AppIcon.appiconset"
 
 # 디렉토리 생성
@@ -141,7 +141,9 @@ echo "✅ 아이콘 생성 완료!"
 echo ""
 echo "📋 다음 단계:"
 echo "   1. Xcode에서 프로젝트 열기"
-echo "   2. AIStreamWallpaper/Resources/Assets.xcassets 폴더를 프로젝트에 드래그"
+echo "   2. SkyloftWP/Resources/Assets.xcassets 폴더를 프로젝트에 드래그"
 echo "   3. Target → Build Settings → Asset Catalog Compiler → App Icon → AppIcon 확인"
 echo "   4. 빌드 (⌘B)"
+
+
 

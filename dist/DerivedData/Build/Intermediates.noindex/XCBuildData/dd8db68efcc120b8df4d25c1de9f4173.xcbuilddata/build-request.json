@@ -1,0 +1,66 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "f6ba49eeeec93d5326caff32403bcebd18d8042386b79e2c279fd162df0205c8"
+    }
+  ],
+  "containerPath" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/SkyloftWP.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx26.2",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Products",
+      "derivedDataPath" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "BUILD_DIR" : "/Users/mastergear/toy/midtv-fan-bg/AIStreamWallpaper-Mac/dist/Build"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "COLOR_DIAGNOSTICS" : "YES",
+          "diagnostic_message_length" : "35",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
