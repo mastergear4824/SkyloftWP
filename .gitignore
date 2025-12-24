@@ -1,7 +1,8 @@
 # Build outputs
 build/
 DerivedData/
-dist/DerivedData/
+dist/*
+!dist/*.dmg
 *.xcuserstate
 
 # Xcode
