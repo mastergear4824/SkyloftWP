@@ -47,9 +47,6 @@ class VideoWallpaperView: NSView {
         NotificationCenter.default.removeObserver(self)
         cancellables.removeAll()
         
-        // ⚠️ 중요: NotificationCenter observer 제거 (소리 섞임 방지)
-        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
-        
         if let observer = timeObserver {
             player?.removeTimeObserver(observer)
             timeObserver = nil
@@ -80,13 +77,35 @@ class VideoWallpaperView: NSView {
     }
     
     private func setupObservers() {
-        ConfigurationManager.shared.$config
-            .debounce(for: .milliseconds(200), scheduler: DispatchQueue.main)
-            .sink { [weak self] config in
-                self?.isMuted = config.behavior.muteAudio
-                self?.applyOverlaySettings(config.overlay)
-            }
-            .store(in: &cancellables)
+        // NotificationCenter 기반으로 변경 (Combine 중복 구독 제거)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleOverlayChange),
+            name: .overlayConfigDidChange,
+            object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleBehaviorChange),
+            name: .behaviorConfigDidChange,
+            object: nil
+        )
+        
+        // 초기 설정 적용
+        let config = ConfigurationManager.shared.config
+        isMuted = config.behavior.muteAudio
+        applyOverlaySettings(config.overlay)
+    }
+    
+    @objc private func handleOverlayChange(_ notification: Notification) {
+        guard let overlay = notification.object as? OverlayConfiguration else { return }
+        applyOverlaySettings(overlay)
+    }
+    
+    @objc private func handleBehaviorChange(_ notification: Notification) {
+        guard let behavior = notification.object as? BehaviorConfiguration else { return }
+        isMuted = behavior.muteAudio
     }
     
     // MARK: - Overlay Settings
@@ -116,6 +135,18 @@ class VideoWallpaperView: NSView {
         applyFilters(blur: overlay.blur, saturation: overlay.saturation)
     }
     
+    // 🔋 GPU 컨텍스트 재사용 (CIFilter 최적화)
+    private static let gpuContext: CIContext = {
+        // Metal GPU 가속 강제 사용
+        if let device = MTLCreateSystemDefaultDevice() {
+            return CIContext(mtlDevice: device, options: [
+                .useSoftwareRenderer: false,
+                .priorityRequestLow: false
+            ])
+        }
+        return CIContext(options: [.useSoftwareRenderer: false])
+    }()
+    
     private func applyFilters(blur: Double, saturation: Double) {
         // 값이 변경되지 않았으면 스킵
         guard blur != currentBlurRadius || saturation != currentSaturation else { return }
@@ -125,16 +156,18 @@ class VideoWallpaperView: NSView {
         
         var filters: [CIFilter] = []
         
-        // Gaussian Blur 필터
-        if blur > 1 {
+        // Gaussian Blur 필터 (임계값 조정: 1 → 2로 상향)
+        if blur > 2 {
             if let blurFilter = CIFilter(name: "CIGaussianBlur") {
-                blurFilter.setValue(blur, forKey: kCIInputRadiusKey)
+                // 블러 값 제한 (너무 높으면 성능 저하)
+                let clampedBlur = min(blur, 30.0)
+                blurFilter.setValue(clampedBlur, forKey: kCIInputRadiusKey)
                 filters.append(blurFilter)
             }
         }
         
-        // Saturation 필터
-        if saturation != 1.0 {
+        // Saturation 필터 (변화량이 작으면 스킵)
+        if abs(saturation - 1.0) > 0.05 {
             if let colorFilter = CIFilter(name: "CIColorControls") {
                 colorFilter.setValue(saturation, forKey: kCIInputSaturationKey)
                 filters.append(colorFilter)
@@ -189,8 +222,11 @@ class VideoWallpaperView: NSView {
         let asset = AVURLAsset(url: url)
         let item = AVPlayerItem(asset: asset)
         
-        // 🔋 CPU/메모리 최적화: 버퍼 크기 제한 (5초)
-        item.preferredForwardBufferDuration = 5
+        // 🔋 CPU/메모리 최적화: 버퍼 크기 제한 (5초 → 3초로 감소)
+        item.preferredForwardBufferDuration = 3
+        
+        // 🔋 해상도 제한 (4K 비디오도 1080p로 제한하여 GPU 부하 감소)
+        item.preferredMaximumResolution = CGSize(width: 1920, height: 1080)
         
         player = AVPlayer(playerItem: item)
         player?.isMuted = isMuted
@@ -226,8 +262,11 @@ class VideoWallpaperView: NSView {
         let asset = AVURLAsset(url: url)
         let item = AVPlayerItem(asset: asset)
         
-        // 🔋 CPU/메모리 최적화: 버퍼 크기 제한 (5초)
-        item.preferredForwardBufferDuration = 5
+        // 🔋 CPU/메모리 최적화: 버퍼 크기 제한 (5초 → 3초로 감소)
+        item.preferredForwardBufferDuration = 3
+        
+        // 🔋 해상도 제한 (4K 비디오도 1080p로 제한하여 GPU 부하 감소)
+        item.preferredMaximumResolution = CGSize(width: 1920, height: 1080)
         
         let newPlayer = AVPlayer(playerItem: item)
         newPlayer.isMuted = isMuted
@@ -293,7 +332,12 @@ class VideoWallpaperView: NSView {
         // CPU 최적화 설정 포함
         let asset = AVURLAsset(url: url)
         let item = AVPlayerItem(asset: asset)
-        item.preferredForwardBufferDuration = 5
+        
+        // 🔋 버퍼 크기 제한 (3초)
+        item.preferredForwardBufferDuration = 3
+        
+        // 🔋 해상도 제한 (1080p)
+        item.preferredMaximumResolution = CGSize(width: 1920, height: 1080)
         
         player = AVPlayer(playerItem: item)
         player?.isMuted = isMuted

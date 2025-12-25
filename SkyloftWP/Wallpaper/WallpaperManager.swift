@@ -363,13 +363,14 @@ class WallpaperManager: ObservableObject {
         // 즉시 첫 번째 영상 가져오기
         fetchRandomPhotosVideo()
         
-        // 타이머 시작 - 10초마다 새 영상 가져오기 (오래된 영상 교체)
+        // 타이머 시작 - 15초마다 새 영상 가져오기 (10초 → 15초 최적화)
         photosStreamingTimer?.invalidate()
-        photosStreamingTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { [weak self] _ in
+        photosStreamingTimer = Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { [weak self] _ in
+            guard self?.isStreamingConnected == true else { return }
             self?.fetchRandomPhotosVideo()
         }
         
-        print("📷 [Photos] ✅ Photos Library streaming started")
+        print("📷 [Photos] ✅ Photos Library streaming started (15s interval - optimized)")
     }
     
     private func showPhotosAccessAlert() {
@@ -580,12 +581,14 @@ class WallpaperManager: ObservableObject {
     private func startKeepAliveTimer() {
         streamingKeepAliveTimer?.invalidate()
         
-        // 5초마다 비디오 체크 - 이벤트가 놓쳐도 폴링으로 잡기
-        streamingKeepAliveTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
+        // 15초마다 비디오 체크 (5초 → 15초로 최적화, 에너지 절약)
+        // 이벤트 기반 감지가 주요 방식이므로 폴링 간격 늘림
+        streamingKeepAliveTimer = Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { [weak self] _ in
+            guard self?.isStreamingConnected == true else { return }
             self?.checkAndCaptureVideo()
         }
         
-        print("📡 [Streaming] Keep-alive timer started (5s interval)")
+        print("📡 [Streaming] Keep-alive timer started (15s interval - optimized)")
     }
     
     private func checkAndCaptureVideo() {
@@ -1016,6 +1019,9 @@ class WallpaperManager: ObservableObject {
     private var monitorVideoIndices: [CGDirectDisplayID: Int] = [:]
     private var currentlyPlayingVideoId: String = ""  // 현재 재생 중인 영상 ID
     
+    // 🔋 비디오 인덱스 캐시 (O(n) → O(1) 검색)
+    private var videoIdToIndex: [String: Int] = [:]
+    
     private func playVideo(_ video: VideoItem) {
         // videoViews가 없으면 생성
         if videoViews.isEmpty {
@@ -1088,8 +1094,8 @@ class WallpaperManager: ObservableObject {
         // 현재 재생 중인 영상의 ID로 다음 영상 찾기 (인덱스가 아닌 ID 기반)
         let currentId = currentlyPlayingVideoId
         
-        // 현재 영상의 위치 찾기
-        let currentIdx = videos.firstIndex { $0.id == currentId } ?? -1
+        // 🔋 최적화: 캐시된 인덱스 사용 (O(1) 검색)
+        let currentIdx = getVideoIndex(for: currentId) ?? -1
         
         // 다음 영상 인덱스 계산
         var nextIdx = currentIdx + 1
@@ -1197,6 +1203,26 @@ class WallpaperManager: ObservableObject {
     @objc private func handleVideoSaved(_ notification: Notification) {
         // 새 영상이 저장되면 플레이리스트 갱신
         libraryManager.loadLibrary()
+        rebuildVideoIndex()  // 인덱스 캐시 갱신
+    }
+    
+    // MARK: - 비디오 인덱스 캐시 (O(1) 검색)
+    
+    private func rebuildVideoIndex() {
+        let videos = libraryManager.videos
+        videoIdToIndex = Dictionary(uniqueKeysWithValues: 
+            videos.enumerated().map { ($1.id, $0) }
+        )
+    }
+    
+    private func getVideoIndex(for videoId: String) -> Int? {
+        // 캐시된 인덱스 반환 (O(1))
+        if let cachedIndex = videoIdToIndex[videoId] {
+            return cachedIndex
+        }
+        // 캐시 미스 시 재빌드 후 재시도
+        rebuildVideoIndex()
+        return videoIdToIndex[videoId]
     }
     
     private func showNotification(title: String, message: String) {

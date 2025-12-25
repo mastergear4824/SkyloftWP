@@ -9,6 +9,13 @@ import Foundation
 import Combine
 import ServiceManagement
 
+// MARK: - Configuration Change Notifications
+extension Notification.Name {
+    static let overlayConfigDidChange = Notification.Name("overlayConfigDidChange")
+    static let behaviorConfigDidChange = Notification.Name("behaviorConfigDidChange")
+    static let streamingConfigDidChange = Notification.Name("streamingConfigDidChange")
+}
+
 class ConfigurationManager: ObservableObject {
     
     // MARK: - Singleton
@@ -17,7 +24,21 @@ class ConfigurationManager: ObservableObject {
     
     // MARK: - Published Properties
     
-    @Published var config: AppConfiguration
+    @Published var config: AppConfiguration {
+        didSet {
+            // 변경된 설정에 따라 특정 알림만 발송 (Combine 중복 구독 대체)
+            if oldValue.overlay != config.overlay {
+                NotificationCenter.default.post(name: .overlayConfigDidChange, object: config.overlay)
+            }
+            if oldValue.behavior.muteAudio != config.behavior.muteAudio {
+                NotificationCenter.default.post(name: .behaviorConfigDidChange, object: config.behavior)
+            }
+            if oldValue.streaming.connectionEnabled != config.streaming.connectionEnabled ||
+               oldValue.streaming.selectedSourceId != config.streaming.selectedSourceId {
+                NotificationCenter.default.post(name: .streamingConfigDidChange, object: config.streaming)
+            }
+        }
+    }
     
     // MARK: - Private Properties
     

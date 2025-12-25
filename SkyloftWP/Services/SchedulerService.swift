@@ -20,6 +20,7 @@ class SchedulerService: ObservableObject {
     
     @Published var shouldPause = false
     @Published var pauseReason: PauseReason?
+    @Published var isLowPowerMode = false  // 🔋 저전력 모드 상태
     
     // MARK: - Properties
     
@@ -55,13 +56,19 @@ class SchedulerService: ObservableObject {
     
     // MARK: - Monitoring
     
+    // 통합 시스템 타이머 (배터리 + 스케줄을 하나로)
+    private var systemTimer: Timer?
+    private var lastScheduleCheck: Date = .distantPast
+    
     func startMonitoring() {
-        startScheduleMonitoring()
-        startBatteryMonitoring()
+        startSystemMonitoring()  // 배터리 + 스케줄 통합
         startFullscreenMonitoring()
     }
     
     func stopMonitoring() {
+        systemTimer?.invalidate()
+        systemTimer = nil
+        
         scheduleTimer?.invalidate()
         scheduleTimer = nil
         
@@ -73,10 +80,34 @@ class SchedulerService: ObservableObject {
         }
     }
     
-    // MARK: - Schedule Monitoring
+    // MARK: - 통합 시스템 모니터링 (배터리 30초 + 스케줄 60초를 하나로)
+    
+    private func startSystemMonitoring() {
+        // 30초마다 실행 (배터리 체크 주기)
+        systemTimer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            
+            // 배터리 체크 (매번)
+            self.checkBattery()
+            
+            // 스케줄 체크 (60초마다 - 마지막 체크로부터 55초 이상 경과 시)
+            if Date().timeIntervalSince(self.lastScheduleCheck) >= 55 {
+                self.checkSchedule()
+                self.lastScheduleCheck = Date()
+            }
+        }
+        
+        // 초기 체크
+        checkBattery()
+        checkSchedule()
+        lastScheduleCheck = Date()
+    }
+    
+    // MARK: - Schedule Monitoring (Legacy - 통합 타이머로 대체됨)
     
     private func startScheduleMonitoring() {
-        // Check every minute
+        // 이제 startSystemMonitoring()에서 통합 처리됨
+        // 기존 코드는 호환성을 위해 유지
         scheduleTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
             self?.checkSchedule()
         }
@@ -134,10 +165,11 @@ class SchedulerService: ObservableObject {
         }
     }
     
-    // MARK: - Battery Monitoring
+    // MARK: - Battery Monitoring (Legacy - 통합 타이머로 대체됨)
     
     private func startBatteryMonitoring() {
-        // Check every 30 seconds
+        // 이제 startSystemMonitoring()에서 통합 처리됨
+        // 기존 코드는 호환성을 위해 유지
         batteryMonitor = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] _ in
             self?.checkBattery()
         }
@@ -147,6 +179,17 @@ class SchedulerService: ObservableObject {
     }
     
     private func checkBattery() {
+        let isOnBattery = !isPluggedIn()
+        
+        // 🔋 저전력 모드 상태 업데이트 및 알림
+        let wasLowPower = isLowPowerMode
+        isLowPowerMode = isOnBattery
+        
+        if isLowPowerMode != wasLowPower {
+            NotificationCenter.default.post(name: .lowPowerModeDidChange, object: isLowPowerMode)
+            print("🔋 [Energy] Low power mode: \(isLowPowerMode ? "ON" : "OFF")")
+        }
+        
         guard configManager.config.schedule.pauseOnBattery else {
             if pauseReason == .batteryMode {
                 shouldPause = false
@@ -154,8 +197,6 @@ class SchedulerService: ObservableObject {
             }
             return
         }
-        
-        let isOnBattery = !isPluggedIn()
         
         if isOnBattery {
             shouldPause = true

@@ -19,6 +19,14 @@ class ThumbnailGenerator {
     
     private let thumbnailSize = CGSize(width: 320, height: 180)  // 16:9 aspect ratio
     
+    // 🔋 메모리 캐시 - 크기 제한으로 메모리 사용량 관리
+    private let thumbnailCache: NSCache<NSString, NSImage> = {
+        let cache = NSCache<NSString, NSImage>()
+        cache.countLimit = 50  // 최대 50개 썸네일
+        cache.totalCostLimit = 50 * 1024 * 1024  // 50MB 제한
+        return cache
+    }()
+    
     private var thumbnailsDirectory: URL {
         let path = ConfigurationManager.shared.config.library.path
         return URL(fileURLWithPath: path).appendingPathComponent("thumbnails")
@@ -70,7 +78,27 @@ class ThumbnailGenerator {
     
     func getThumbnail(for video: VideoItem) -> NSImage? {
         guard let thumbnailPath = video.thumbnailPath else { return nil }
-        return NSImage(contentsOfFile: thumbnailPath)
+        
+        let cacheKey = video.id as NSString
+        
+        // 캐시에서 먼저 확인
+        if let cachedImage = thumbnailCache.object(forKey: cacheKey) {
+            return cachedImage
+        }
+        
+        // 캐시 미스 - 디스크에서 로드
+        guard let image = NSImage(contentsOfFile: thumbnailPath) else { return nil }
+        
+        // 캐시에 저장 (대략적인 메모리 크기 계산)
+        let cost = Int(image.size.width * image.size.height * 4)  // RGBA 4바이트
+        thumbnailCache.setObject(image, forKey: cacheKey, cost: cost)
+        
+        return image
+    }
+    
+    /// 캐시 초기화 (메모리 압박 시 호출)
+    func clearCache() {
+        thumbnailCache.removeAllObjects()
     }
     
     func deleteThumbnail(for video: VideoItem) {

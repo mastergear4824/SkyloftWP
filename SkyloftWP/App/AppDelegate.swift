@@ -33,6 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var isSessionActive = true  // 세션이 활성화 상태인지 (잠금되면 false)
     private var displayChangeWorkItem: DispatchWorkItem?
     
+    // 🔋 App Nap 관리 - 비디오 재생 중일 때만 활동 유지
+    private var playbackActivity: NSObjectProtocol?
+    
     // MARK: - Lifecycle
     
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -270,6 +273,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // ⚠️ 잠금 시 항상 완전 정지 (스크린세이버/잠금 진입 방해 방지)
         wallpaperManager?.pause()
         wallpaperManager?.hideWindows()
+        
+        // 🔋 App Nap 허용 - 화면 잠금 시 에너지 절약
+        endPlaybackActivity()
     }
     
     @objc private func handleScreenSaverStarted(_ notification: Notification) {
@@ -361,6 +367,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Resume playback if was playing before
         if wasPlayingBeforeSleep {
             wallpaperManager?.resume()
+            beginPlaybackActivity()  // 🔋 활동 재개
             print("▶️ [Recovery] Resumed playback")
         }
         
@@ -434,7 +441,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if config.behavior.autoStart {
             wallpaperManager?.start()
+            beginPlaybackActivity()
         }
+    }
+    
+    // MARK: - App Nap 관리
+    
+    /// 비디오 재생 활동 시작 - App Nap 방지
+    private func beginPlaybackActivity() {
+        guard playbackActivity == nil else { return }
+        
+        // 비디오 재생 중에는 시스템 슬립은 허용하지만 App Nap은 방지
+        playbackActivity = ProcessInfo.processInfo.beginActivity(
+            options: [.userInitiatedAllowingIdleSystemSleep, .latencyCritical],
+            reason: "Video wallpaper playback"
+        )
+        print("🔋 [Energy] Playback activity started")
+    }
+    
+    /// 비디오 재생 활동 종료 - App Nap 허용
+    func endPlaybackActivity() {
+        guard let activity = playbackActivity else { return }
+        ProcessInfo.processInfo.endActivity(activity)
+        playbackActivity = nil
+        print("🔋 [Energy] Playback activity ended - App Nap allowed")
     }
     
     // MARK: - Window Management
@@ -553,4 +583,7 @@ extension Notification.Name {
     static let videoDidSave = Notification.Name("videoDidSave")
     static let playbackModeDidChange = Notification.Name("playbackModeDidChange")
     static let libraryDidUpdate = Notification.Name("libraryDidUpdate")
+    
+    // 🔋 에너지 관련 알림
+    static let lowPowerModeDidChange = Notification.Name("lowPowerModeDidChange")
 }

@@ -41,6 +41,7 @@ class WebWallpaperView: NSView {
     }
     
     deinit {
+        NotificationCenter.default.removeObserver(self)
         webView?.configuration.userContentController.removeScriptMessageHandler(forName: "videoHandler")
     }
     
@@ -91,18 +92,35 @@ class WebWallpaperView: NSView {
     }
     
     private func setupObservers() {
-        // Use removeDuplicates and debounce to reduce processing
-        ConfigurationManager.shared.$config
-            .debounce(for: .milliseconds(200), scheduler: DispatchQueue.main)
-            .removeDuplicates { old, new in
-                old.behavior.muteAudio == new.behavior.muteAudio &&
-                old.overlay == new.overlay
-            }
-            .sink { [weak self] config in
-                self?.isMuted = config.behavior.muteAudio
-                self?.applyOverlaySettings(config.overlay)
-            }
-            .store(in: &cancellables)
+        // NotificationCenter 기반으로 변경 (Combine 중복 구독 제거)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleOverlayChange),
+            name: .overlayConfigDidChange,
+            object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleBehaviorChange),
+            name: .behaviorConfigDidChange,
+            object: nil
+        )
+        
+        // 초기 설정 적용
+        let config = ConfigurationManager.shared.config
+        isMuted = config.behavior.muteAudio
+        applyOverlaySettings(config.overlay)
+    }
+    
+    @objc private func handleOverlayChange(_ notification: Notification) {
+        guard let overlay = notification.object as? OverlayConfiguration else { return }
+        applyOverlaySettings(overlay)
+    }
+    
+    @objc private func handleBehaviorChange(_ notification: Notification) {
+        guard let behavior = notification.object as? BehaviorConfiguration else { return }
+        isMuted = behavior.muteAudio
     }
     
     // MARK: - Overlay Settings
@@ -516,13 +534,17 @@ class WebWallpaperView: NSView {
                 });
             }
             
-            // DOM 변경 감시 (video 요소 추가/변경)
+            // DOM 변경 감시 (video 요소 추가/변경) - 500ms throttle 적용으로 CPU 부하 감소
+            let mutationTimeout = null;
             new MutationObserver(() => {
-                const video = document.querySelector('video');
-                if (video) {
-                    setupVideoListeners(video);
-                    notifyVideoChange(video, 'domChange');
-                }
+                if (mutationTimeout) clearTimeout(mutationTimeout);
+                mutationTimeout = setTimeout(() => {
+                    const video = document.querySelector('video');
+                    if (video) {
+                        setupVideoListeners(video);
+                        notifyVideoChange(video, 'domChange');
+                    }
+                }, 500);  // 500ms throttle - DOM 변경 과부하 방지
             }).observe(document.body, { 
                 childList: true, 
                 subtree: true

@@ -186,39 +186,28 @@ class DownloadManager: ObservableObject {
                 let attributes = try fileManager.attributesOfItem(atPath: localURL.path)
                 let fileSize = attributes[.size] as? Int64 ?? 0
                 
-                // ✅ 16:9 비율 확인 (허용 오차 5%)
-                let asset = AVURLAsset(url: localURL)
-                if let track = asset.tracks(withMediaType: .video).first {
-                    let size = track.naturalSize.applying(track.preferredTransform)
-                    let width = abs(size.width)
-                    let height = abs(size.height)
-                    
-                    if height > 0 {
-                        let ratio = width / height
-                        let targetRatio: CGFloat = 16.0 / 9.0
-                        
-                        if ratio < targetRatio * 0.95 || ratio > targetRatio * 1.05 {
-                            // 16:9가 아니면 삭제
-                            print("❌ [Download] Not 16:9 (\(Int(width))x\(Int(height)) = \(String(format: "%.2f", ratio))), deleting...")
-                            try? fileManager.removeItem(at: localURL)
-                            throw DownloadError.downloadFailed(statusCode: -1) // 스킵
-                        }
-                        print("✅ [Download] 16:9 verified: \(Int(width))x\(Int(height))")
-                    }
+                // ✅ 최적화: 16:9 검증 + 메타데이터 추출을 한 번에 처리 (AVAsset 재사용)
+                let validationResult = try await validateAndGetVideoInfo(from: localURL)
+                
+                if !validationResult.isValid {
+                    // 16:9가 아니면 삭제
+                    print("❌ [Download] Not 16:9, deleting...")
+                    try? fileManager.removeItem(at: localURL)
+                    throw DownloadError.downloadFailed(statusCode: -1) // 스킵
                 }
                 
                 print("✅ [Download] Saved: \(fileName) (\(ByteCountFormatter.string(fromByteCount: fileSize, countStyle: .file)))")
                 
-                // Create video item with minimal info first (fast)
-                var video = VideoItem(
+                // Create video item with metadata from validation (이미 추출됨)
+                let video = VideoItem(
                     id: videoId,
                     sourceUrl: metadata.sourceUrl,
                     prompt: metadata.prompt,
                     author: metadata.author,
                     midjourneyJobId: metadata.midjourneyJobId,
                     savedAt: Date(),
-                    duration: 0,
-                    resolution: "Processing...",
+                    duration: validationResult.duration,
+                    resolution: validationResult.resolution,
                     fileSize: fileSize,
                     localPath: localURL.path,
                     thumbnailPath: nil
@@ -227,8 +216,8 @@ class DownloadManager: ObservableObject {
                 // 폴더에 파일 저장 완료 → DB 동기화
                 LibraryManager.shared.syncFromFolder()
                 
-                // Process metadata and thumbnail in background
-                processVideoInBackground(videoId: videoId, localURL: localURL)
+                // 썸네일만 백그라운드에서 처리 (메타데이터는 이미 있음)
+                processVideoThumbnailInBackground(videoId: videoId, localURL: localURL, duration: validationResult.duration, resolution: validationResult.resolution)
                 
                 DispatchQueue.main.async {
                     self.totalDownloaded += 1
@@ -249,6 +238,48 @@ class DownloadManager: ObservableObject {
         }
         
         throw lastError ?? DownloadError.downloadFailed(statusCode: 0)
+    }
+    
+    // MARK: - 최적화: 16:9 검증 + 메타데이터 추출 통합 (AVAsset 1회 생성)
+    
+    private func validateAndGetVideoInfo(from localURL: URL) async throws -> (isValid: Bool, duration: Double, resolution: String) {
+        let asset = AVURLAsset(url: localURL)
+        
+        // 비디오 트랙 로드
+        let tracks = try await asset.loadTracks(withMediaType: .video)
+        guard let track = tracks.first else {
+            return (false, 0, "Unknown")
+        }
+        
+        // 크기와 변환 동시 로드
+        let size = try await track.load(.naturalSize)
+        let transform = try await track.load(.preferredTransform)
+        let transformedSize = size.applying(transform)
+        
+        let width = abs(transformedSize.width)
+        let height = abs(transformedSize.height)
+        
+        // 16:9 비율 확인 (허용 오차 5%)
+        var isValid = true
+        if height > 0 {
+            let ratio = width / height
+            let targetRatio: CGFloat = 16.0 / 9.0
+            isValid = ratio >= targetRatio * 0.95 && ratio <= targetRatio * 1.05
+            
+            if isValid {
+                print("✅ [Download] 16:9 verified: \(Int(width))x\(Int(height))")
+            } else {
+                print("❌ [Download] Not 16:9 (\(Int(width))x\(Int(height)) = \(String(format: "%.2f", ratio)))")
+            }
+        }
+        
+        // duration 로드
+        let duration = try await asset.load(.duration)
+        let durationSeconds = CMTimeGetSeconds(duration)
+        
+        let resolution = "\(Int(width))x\(Int(height))"
+        
+        return (isValid, durationSeconds, resolution)
     }
     
     func cancelDownload(for urlString: String) {
@@ -337,64 +368,55 @@ class DownloadManager: ObservableObject {
     
     // MARK: - Background Processing
     
-    private func processVideoInBackground(videoId: String, localURL: URL) {
-        // 고우선순위 Task로 즉시 처리 시작
+    /// 썸네일만 백그라운드에서 처리 (메타데이터는 이미 추출됨)
+    private func processVideoThumbnailInBackground(videoId: String, localURL: URL, duration: Double, resolution: String) {
         Task(priority: .high) {
             do {
-                // 섬네일 먼저 생성 (UI에 바로 보이도록)
+                // 섬네일 생성
                 let thumbnailPath = try await ThumbnailGenerator.shared.generateThumbnail(for: localURL, videoId: videoId)
                 
-                // 섬네일이 생성되면 즉시 UI 업데이트
+                // 섬네일이 생성되면 메타데이터와 함께 업데이트
                 await MainActor.run {
                     LibraryManager.shared.updateVideoMetadata(
                         videoId: videoId,
-                        duration: 0,  // 일단 0으로 설정
-                        resolution: "Processing...",
+                        duration: duration,
+                        resolution: resolution,
                         thumbnailPath: thumbnailPath
                     )
                     print("🖼️ [Process] Thumbnail ready: \(videoId.prefix(8))...")
                 }
                 
-                // 메타데이터는 그 다음에 처리 (느려도 됨)
-                let videoInfo = try await self.getVideoInfo(from: localURL)
+            } catch {
+                print("⚠️ [Process] Failed to generate thumbnail: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    /// 기존 호환성을 위한 메서드 (메타데이터 + 썸네일 모두 처리)
+    private func processVideoInBackground(videoId: String, localURL: URL) {
+        Task(priority: .high) {
+            do {
+                // 메타데이터 추출
+                let info = try await validateAndGetVideoInfo(from: localURL)
                 
-                // 메타데이터 업데이트
+                // 섬네일 생성
+                let thumbnailPath = try await ThumbnailGenerator.shared.generateThumbnail(for: localURL, videoId: videoId)
+                
+                // 업데이트
                 await MainActor.run {
                     LibraryManager.shared.updateVideoMetadata(
                         videoId: videoId,
-                        duration: videoInfo.duration,
-                        resolution: videoInfo.resolution,
+                        duration: info.duration,
+                        resolution: info.resolution,
                         thumbnailPath: thumbnailPath
                     )
-                    print("🎬 [Process] Metadata ready: \(videoId.prefix(8))...")
+                    print("🎬 [Process] Complete: \(videoId.prefix(8))...")
                 }
                 
             } catch {
                 print("⚠️ [Process] Failed to process video: \(error.localizedDescription)")
             }
         }
-    }
-    
-    private func getVideoInfo(from url: URL) async throws -> (duration: Double, resolution: String, fileSize: Int64) {
-        let asset = AVURLAsset(url: url)
-        
-        // Get duration
-        let duration = try await asset.load(.duration)
-        let durationSeconds = CMTimeGetSeconds(duration)
-        
-        // Get resolution
-        var resolution = "Unknown"
-        let tracks = try await asset.loadTracks(withMediaType: .video)
-        if let videoTrack = tracks.first {
-            let size = try await videoTrack.load(.naturalSize)
-            resolution = "\(Int(size.width))x\(Int(size.height))"
-        }
-        
-        // Get file size
-        let attributes = try fileManager.attributesOfItem(atPath: url.path)
-        let fileSize = attributes[.size] as? Int64 ?? 0
-        
-        return (durationSeconds, resolution, fileSize)
     }
 }
 
